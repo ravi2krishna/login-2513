@@ -22,3 +22,9 @@ courses:
 - aws
 - azure
 - python
+
+# Any object we represent in k8s it contains 4 top level items
+apiVersion:
+kind:
+metadata:
+spec:
