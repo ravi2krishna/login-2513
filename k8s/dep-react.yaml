@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react
+spec:
+  replicas: 1 # always one nginx pod should run
+  selector:
+    matchLabels:
+      app: react
+  template: # Pod Template (nginx)
+    metadata:
+      labels:
+        app: react
+    spec:
+      containers:
+      - name: c1
+        image: ravi2krishna/react-app
+        ports:
+        - containerPort: 80
